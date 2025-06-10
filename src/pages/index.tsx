@@ -1,9 +1,17 @@
-import { Button } from "@/Components/Button";
+import { Header } from "@/Components/Header/Header";
+import bgImage from "@/assets/homeBackground.png";
+import { ContentWrapper, HeroSection } from "./styles";
 
 export default function Home() {
   return (
     <>
-      <Button backgroundColor="#8648DF" color="white" title={"Login"} />
+      <Header />
+      <HeroSection $bg={bgImage.src}>
+        <ContentWrapper>
+          <h1>Bem-vindo à nossa Landing Page</h1>
+          <p>Texto chamativo aqui...</p>
+        </ContentWrapper>
+      </HeroSection>
     </>
   );
 }
