@@ -1,21 +1,19 @@
 import React from "react";
 import Image from "next/image";
-import {
-  HeaderContainer,
-  LogoWrapper,
-  Nav,
-  NavItem,
-  RightSection,
-} from "./styles";
+import { HeaderContainer, Nav, NavItem, RightSection } from "./styles";
 import { Button } from "../Button";
 import logo from "../../assets/logo.png";
 
 export const Header = () => {
   return (
     <HeaderContainer>
-      <LogoWrapper>
-        <Image src={logo} alt="Logo Crafters" width={120} height={40} />
-      </LogoWrapper>
+      <Image
+        src={logo}
+        alt="Logo Crafters"
+        priority={true}
+        width={135}
+        height={69}
+      />
 
       <Nav>
         <NavItem>Home</NavItem>
@@ -28,7 +26,7 @@ export const Header = () => {
       </Nav>
 
       <RightSection>
-        <Button backgroundColor="#8648DF" color="white" title={"Login"} />
+        <Button $bgcolor="#8648DF" color="white" title={"Login"} />
       </RightSection>
     </HeaderContainer>
   );
