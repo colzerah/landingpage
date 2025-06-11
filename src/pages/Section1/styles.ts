@@ -11,13 +11,6 @@ export const HeroSection = styled.section<{ $bg: string }>`
   place-items: center;
 `;
 
-// export const Article = styled.article`
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   align-items: center;
-//   justify-content: center;
-// `;
-
 export const LeftSection = styled.div`
   overflow: hidden;
 `;
