@@ -23,6 +23,7 @@ export const Nav = styled.nav`
 `;
 
 export const NavItem = styled.a`
+  font-family: ${({ theme }) => theme.fonts.primary};
   font-size: 1rem;
   color: white;
   text-decoration: none;
