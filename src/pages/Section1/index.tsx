@@ -8,8 +8,12 @@ import {
   StyledSpan,
   InputContainer,
   StyledInput,
+  Icon,
 } from "./styles";
 import bgImage from "@/assets/homeBackground.png";
+import serachIcon from "../../assets/Icons/search.png";
+import { Button } from "@/Components/Button";
+import { theme } from "@/styles/theme";
 
 export const Section1 = () => {
   return (
@@ -18,7 +22,15 @@ export const Section1 = () => {
         <LeftH1>Soluções digitais que moldam o futuro</LeftH1>
         <StyledSpan>da sua empresa.</StyledSpan>
         <InputContainer>
+          <Icon src={serachIcon.src} alt="Lupa" />
           <StyledInput placeholder="Faça uma pergunta" />
+          <Button
+            title={"Enviar"}
+            width="185px"
+            height="70px"
+            color={theme.corlos.black100}
+            bgcolor={theme.corlos.yellow100}
+          />
         </InputContainer>
       </LeftSection>
 

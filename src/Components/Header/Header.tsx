@@ -3,6 +3,7 @@ import Image from "next/image";
 import { HeaderContainer, Nav, NavItem, RightSection } from "./styles";
 import { Button } from "../Button";
 import logo from "../../assets/logo.png";
+import { theme } from "@/styles/theme";
 
 export const Header = () => {
   return (
@@ -26,7 +27,13 @@ export const Header = () => {
       </Nav>
 
       <RightSection>
-        <Button $bgcolor="#8648DF" color="white" title={"Login"} />
+        <Button
+          bgcolor={theme.corlos.purple200}
+          color={theme.corlos.white100}
+          title={"Login"}
+          width="185px"
+          height="70px"
+        />
       </RightSection>
     </HeaderContainer>
   );

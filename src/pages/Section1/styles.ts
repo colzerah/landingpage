@@ -22,15 +22,26 @@ export const LeftH1 = styled.h1`
 export const InputContainer = styled.div`
   margin-top: 2rem;
   display: flex;
-  width: 40%;
-  gap: 1rem;
+  width: 500px;
+  padding: 10px;
+  align-items: center;
+  background-color: #2b2b3d;
+  border-radius: 999px;
+`;
+
+export const Icon = styled.img`
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
 `;
 
 export const StyledInput = styled.input`
   flex: 1;
-  padding: 1rem;
-  border-radius: 999px;
+  background: transparent;
   border: none;
+  color: white;
+  outline: none;
+  padding: 8px;
 `;
 
 export const StyledSpan = styled.span`
