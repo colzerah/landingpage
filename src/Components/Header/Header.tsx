@@ -28,8 +28,8 @@ export const Header = () => {
 
       <RightSection>
         <Button
-          bgcolor={theme.corlos.purple200}
-          color={theme.corlos.white100}
+          bgcolor={theme.colors.purple200}
+          color={theme.colors.white100}
           title={"Login"}
           width="185px"
           height="70px"

@@ -1,5 +1,5 @@
 export const theme = {
-  corlos: {
+  colors: {
     black100: "#282A36",
     blue100: "#8BE9FD",
     blue200: "#6272A4",
@@ -12,5 +12,9 @@ export const theme = {
     red100: "#FF5555",
     white100: "#F8F8F2",
     yellow100: "#F1FA8C",
+  },
+  fonts: {
+    primary: "'Poppins', sans-serif",
+    secondary: "'Inter', sans-serif",
   },
 };

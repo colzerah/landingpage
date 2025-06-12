@@ -28,8 +28,8 @@ export const Section1 = () => {
             title={"Enviar"}
             width="185px"
             height="70px"
-            color={theme.corlos.black100}
-            bgcolor={theme.corlos.yellow100}
+            color={theme.colors.black100}
+            bgcolor={theme.colors.yellow100}
           />
         </InputContainer>
       </LeftSection>
