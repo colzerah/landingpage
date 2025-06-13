@@ -4,12 +4,14 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 3rem;
+  padding: 40px 160px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 203px;
   z-index: 10;
+  /* background: linear-gradient(rgba(189, 147, 249, 1), rgba(68, 71, 90, 0)); */
 `;
 
 export const LogoWrapper = styled.div`
@@ -24,7 +26,9 @@ export const Nav = styled.nav`
 
 export const NavItem = styled.a`
   font-family: ${({ theme }) => theme.fonts.primary};
-  font-size: 1rem;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 150%;
   color: white;
   text-decoration: none;
   cursor: pointer;

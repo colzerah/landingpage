@@ -13,13 +13,14 @@ import {
 import bgImage from "@/assets/homeBackground.png";
 import serachIcon from "../../assets/Icons/search.png";
 import { Button } from "@/Components/Button";
-import { theme } from "@/styles/theme";
 
 export const Section1 = () => {
   return (
     <HeroSection $bg={bgImage.src}>
       <LeftSection>
-        <LeftH1>Soluções digitais que moldam o futuro</LeftH1>
+        <LeftH1>
+          Soluções digitais <br /> que moldam o futuro
+        </LeftH1>
         <StyledSpan>da sua empresa.</StyledSpan>
         <InputContainer>
           <Icon src={serachIcon.src} alt="Lupa" />
@@ -28,8 +29,7 @@ export const Section1 = () => {
             title={"Enviar"}
             width="185px"
             height="70px"
-            color={theme.colors.black100}
-            bgcolor={theme.colors.yellow100}
+            colorScheme="secondary"
           />
         </InputContainer>
       </LeftSection>

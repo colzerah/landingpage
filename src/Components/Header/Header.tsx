@@ -3,7 +3,6 @@ import Image from "next/image";
 import { HeaderContainer, Nav, NavItem, RightSection } from "./styles";
 import { Button } from "../Button";
 import logo from "../../assets/logo.png";
-import { theme } from "@/styles/theme";
 
 export const Header = () => {
   return (
@@ -28,11 +27,11 @@ export const Header = () => {
 
       <RightSection>
         <Button
-          bgcolor={theme.colors.purple200}
-          color={theme.colors.white100}
           title={"Login"}
           width="185px"
           height="70px"
+          colorScheme="primary"
+          fontScheme="secondary"
         />
       </RightSection>
     </HeaderContainer>
