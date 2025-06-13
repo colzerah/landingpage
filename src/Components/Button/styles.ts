@@ -5,6 +5,8 @@ export const StyledButton = styled.button<{
   height: string;
   colorScheme: "primary" | "secondary";
   fontScheme: "primary" | "secondary";
+  fontSize: string;
+  fontWeight: number;
 }>`
   background-color: ${({ theme, colorScheme }) => {
     if (colorScheme === "primary") {
@@ -30,4 +32,6 @@ export const StyledButton = styled.button<{
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   padding: 10px 30px;
+  font-size: ${({ fontSize }) => fontSize};
+  font-weight: ${({ fontWeight }) => fontWeight};
 `;

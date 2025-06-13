@@ -32,6 +32,8 @@ export const Header = () => {
           height="70px"
           colorScheme="primary"
           fontScheme="secondary"
+          fontSize="18px"
+          fontWeight={700}
         />
       </RightSection>
     </HeaderContainer>

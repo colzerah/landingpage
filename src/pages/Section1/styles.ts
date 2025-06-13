@@ -58,6 +58,10 @@ export const StyledSpan = styled.span`
 
 export const RightSection = styled.div`
   display: flex;
+  width: 609px;
+  height: 406px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const RightH1 = styled.h1`

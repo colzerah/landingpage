@@ -11,7 +11,7 @@ export const HeaderContainer = styled.header`
   width: 100%;
   height: 203px;
   z-index: 10;
-  /* background: linear-gradient(rgba(189, 147, 249, 1), rgba(68, 71, 90, 0)); */
+  background: linear-gradient(rgba(189, 147, 249, 0.25), rgba(68, 71, 90, 0));
 `;
 
 export const LogoWrapper = styled.div`

@@ -30,6 +30,9 @@ export const Section1 = () => {
             width="185px"
             height="70px"
             colorScheme="secondary"
+            fontScheme="secondary"
+            fontSize="22px"
+            fontWeight={500}
           />
         </InputContainer>
       </LeftSection>

@@ -9,6 +9,8 @@ interface IButton {
   onClick?: () => void;
   colorScheme?: "primary" | "secondary";
   fontScheme?: "primary" | "secondary";
+  fontSize: string;
+  fontWeight: number;
 }
 
 export const Button = ({
@@ -19,6 +21,8 @@ export const Button = ({
   onClick,
   colorScheme = "primary",
   fontScheme = "primary",
+  fontSize,
+  fontWeight,
 }: IButton) => {
   return (
     <StyledButton
@@ -28,6 +32,8 @@ export const Button = ({
       height={height}
       onClick={onClick}
       fontScheme={fontScheme}
+      fontSize={fontSize}
+      fontWeight={fontWeight}
     >
       {title}
     </StyledButton>
