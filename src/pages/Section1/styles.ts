@@ -68,11 +68,23 @@ export const RightSection = styled.div`
 export const Balao1Div = styled.div`
   position: absolute;
   top: 0;
-  left: 0;
+  left: 20px;
 `;
 
 export const Balao2Div = styled.div`
   position: absolute;
   bottom: -20px;
-  right: -30px;
+  right: 0;
+`;
+
+export const LeftVector = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: 90px;
+`;
+
+export const RightVector = styled.div`
+  position: absolute;
+  right: -50px;
+  top: 65px;
 `;

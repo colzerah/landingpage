@@ -11,12 +11,16 @@ import {
   Icon,
   Balao1Div,
   Balao2Div,
+  LeftVector,
+  RightVector,
 } from "./styles";
 import bgImage from "@/assets/homeBackground.png";
 import serachIcon from "../../assets/Icons/search.png";
 import { Button } from "@/Components/Button";
 import balao1 from "@/assets/baloes/balao1.png";
 import balao2 from "@/assets/baloes/balao2.png";
+import leftvector from "@/assets/vetores/leftvector.png";
+import rightvector from "@/assets/vetores/reightvector.png";
 
 export const Section1 = () => {
   return (
@@ -45,7 +49,12 @@ export const Section1 = () => {
         <Balao1Div>
           <Image src={balao1} alt="balao bem vindo" />
         </Balao1Div>
-
+        <LeftVector>
+          <Image src={leftvector} alt="vetor pontilhado esquerda" />
+        </LeftVector>
+        <RightVector>
+          <Image src={rightvector} alt="vetor pontilhado direita" />
+        </RightVector>
         <Balao2Div>
           <Image src={balao2} alt="balao message" />
         </Balao2Div>

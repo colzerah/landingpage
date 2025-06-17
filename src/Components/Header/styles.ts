@@ -29,13 +29,13 @@ export const NavItem = styled.a`
   font-size: 17px;
   font-weight: 600;
   line-height: 150%;
-  color: white;
+  color: ${({ theme }) => theme.colors.white100};
   text-decoration: none;
   cursor: pointer;
   position: relative;
 
   &:hover {
-    color: #f1fa8c;
+    color: ${({ theme }) => theme.colors.yellow100};
     text-decoration: underline;
   }
 `;
