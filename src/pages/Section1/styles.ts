@@ -60,13 +60,19 @@ export const StyledSpan = styled.span`
 `;
 
 export const RightSection = styled.div`
-  display: flex;
+  position: relative;
   width: 609px;
   height: 406px;
-  align-items: center;
-  justify-content: center;
 `;
 
-export const RightH1 = styled.h1`
-  color: white;
+export const Balao1Div = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+`;
+
+export const Balao2Div = styled.div`
+  position: absolute;
+  bottom: -20px;
+  right: -30px;
 `;

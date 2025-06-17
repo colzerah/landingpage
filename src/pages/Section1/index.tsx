@@ -1,18 +1,22 @@
 import React from "react";
+import Image from "next/image";
 import {
   HeroSection,
   LeftSection,
   RightSection,
   LeftH1,
-  RightH1,
   StyledSpan,
   InputContainer,
   StyledInput,
   Icon,
+  Balao1Div,
+  Balao2Div,
 } from "./styles";
 import bgImage from "@/assets/homeBackground.png";
 import serachIcon from "../../assets/Icons/search.png";
 import { Button } from "@/Components/Button";
+import balao1 from "@/assets/baloes/balao1.png";
+import balao2 from "@/assets/baloes/balao2.png";
 
 export const Section1 = () => {
   return (
@@ -38,7 +42,13 @@ export const Section1 = () => {
       </LeftSection>
 
       <RightSection>
-        <RightH1>Lorem Ipsum</RightH1>
+        <Balao1Div>
+          <Image src={balao1} alt="balao bem vindo" />
+        </Balao1Div>
+
+        <Balao2Div>
+          <Image src={balao2} alt="balao message" />
+        </Balao2Div>
       </RightSection>
     </HeroSection>
   );
