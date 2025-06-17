@@ -4,14 +4,14 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 160px;
+  padding: 40px 120px;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 203px;
   z-index: 10;
-  background: linear-gradient(rgba(189, 147, 249, 0.25), rgba(68, 71, 90, 0));
+  background: linear-gradient(rgba(189, 147, 249, 0.4), rgba(68, 71, 90, 0));
 `;
 
 export const LogoWrapper = styled.div`

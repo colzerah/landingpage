@@ -40,13 +40,16 @@ export const StyledInput = styled.input`
   flex: 1;
   background: transparent;
   border: none;
-  /* color: ${({ theme }) => theme.colors.white100}; */
   outline: none;
   padding: 8px;
   font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: 800;
   font-size: 22px;
   line-height: 100%;
+  color: ${({ theme }) => theme.colors.gray300};
+  &::placeholder {
+    color: ${({ theme }) => theme.colors.gray300};
+  }
 `;
 
 export const StyledSpan = styled.span`
