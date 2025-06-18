@@ -4,10 +4,11 @@ export const HeroSection = styled.section<{ $bg: string }>`
   height: 100vh;
   background-image: url(${({ $bg }) => $bg});
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   place-items: center;
 `;
 
@@ -46,9 +47,9 @@ export const StyledInput = styled.input`
   font-weight: 800;
   font-size: 22px;
   line-height: 100%;
-  color: ${({ theme }) => theme.colors.gray300};
+  color: ${({ theme }) => theme.colors.gray400};
   &::placeholder {
-    color: ${({ theme }) => theme.colors.gray300};
+    color: ${({ theme }) => theme.colors.gray400};
   }
 `;
 

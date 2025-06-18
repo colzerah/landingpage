@@ -22,7 +22,7 @@ import balao2 from "@/assets/baloes/balao2.png";
 import leftvector from "@/assets/vetores/leftvector.png";
 import rightvector from "@/assets/vetores/reightvector.png";
 
-export const Section1 = () => {
+export function Section1() {
   return (
     <HeroSection $bg={bgImage.src}>
       <LeftSection>
@@ -61,4 +61,4 @@ export const Section1 = () => {
       </RightSection>
     </HeroSection>
   );
-};
+}

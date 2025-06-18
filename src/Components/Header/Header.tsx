@@ -4,7 +4,7 @@ import { HeaderContainer, Nav, NavItem, RightSection } from "./styles";
 import { Button } from "../Button";
 import logo from "../../assets/logo.png";
 
-export const Header = () => {
+export function Header() {
   return (
     <HeaderContainer>
       <Image
@@ -38,4 +38,4 @@ export const Header = () => {
       </RightSection>
     </HeaderContainer>
   );
-};
+}
