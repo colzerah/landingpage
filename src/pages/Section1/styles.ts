@@ -6,13 +6,12 @@ export const HeroSection = styled.section<{ $bg: string }>`
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  display: grid;
-  // grid-template-columns: 1fr 1fr;
-  grid-template-columns: 1fr;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const LeftSection = styled.div``;
+export const LeftContent = styled.div``;
 
 export const LeftH1 = styled.h1`
   color: ${({ theme }) => theme.colors.white100};
@@ -60,7 +59,7 @@ export const StyledSpan = styled.span`
   font-size: 64px;
 `;
 
-export const RightSection = styled.div`
+export const RightContent = styled.div`
   position: relative;
   width: 609px;
   height: 406px;

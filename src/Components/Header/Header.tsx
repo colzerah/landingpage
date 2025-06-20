@@ -1,19 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import { HeaderContainer, Nav, NavItem, RightSection } from "./styles";
+import {
+  HeaderContainer,
+  LogoWrapper,
+  Nav,
+  NavItem,
+  RightContent,
+  Hamburguer,
+  MobileMenu,
+} from "./styles";
 import { Button } from "../Button";
 import logo from "../../assets/logo.png";
+import { FiMenu, FiX } from "react-icons/fi";
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <HeaderContainer>
-      <Image
-        src={logo}
-        alt="Logo Crafters"
-        priority={true}
-        width={135}
-        height={69}
-      />
+      <Hamburguer onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+      </Hamburguer>
+
+      <LogoWrapper>
+        <Image
+          src={logo}
+          alt="Logo Crafters"
+          priority={true}
+          width={135}
+          height={69}
+        />
+      </LogoWrapper>
 
       <Nav>
         <NavItem>Home</NavItem>
@@ -25,7 +42,7 @@ export function Header() {
         <NavItem>Contato</NavItem>
       </Nav>
 
-      <RightSection>
+      <RightContent>
         <Button
           title={"Login"}
           width="185px"
@@ -35,7 +52,19 @@ export function Header() {
           fontSize="18px"
           fontWeight={700}
         />
-      </RightSection>
+      </RightContent>
+
+      {isOpen && (
+        <MobileMenu>
+          <NavItem>Home</NavItem>
+          <NavItem>Quem Somos</NavItem>
+          <NavItem>Serviços</NavItem>
+          <NavItem>Vídeo</NavItem>
+          <NavItem>Faq</NavItem>
+          <NavItem>Clientes</NavItem>
+          <NavItem>Contato</NavItem>
+        </MobileMenu>
+      )}
     </HeaderContainer>
   );
 }

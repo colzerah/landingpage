@@ -12,16 +12,37 @@ export const HeaderContainer = styled.header`
   height: 203px;
   z-index: 10;
   background: linear-gradient(rgba(189, 147, 249, 0.4), rgba(68, 71, 90, 0));
+
+  @media (max-width: 1224px) {
+    padding: 20px 40px;
+    justify-content: center;
+    display: flex;
+  }
 `;
 
 export const LogoWrapper = styled.div`
   display: flex;
+  flex: 2;
   align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1224px) {
+    order: 2;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+  }
 `;
 
 export const Nav = styled.nav`
   display: flex;
+  flex: 8;
+  justify-content: center;
   gap: 2rem;
+
+  @media (max-width: 1224px) {
+    display: none;
+  }
 `;
 
 export const NavItem = styled.a`
@@ -32,7 +53,6 @@ export const NavItem = styled.a`
   color: ${({ theme }) => theme.colors.white100};
   text-decoration: none;
   cursor: pointer;
-  position: relative;
 
   &:hover {
     color: ${({ theme }) => theme.colors.yellow100};
@@ -40,4 +60,50 @@ export const NavItem = styled.a`
   }
 `;
 
-export const RightSection = styled.div``;
+export const RightContent = styled.div`
+  display: flex;
+  flex: 2;
+  justify-content: center;
+
+  @media (max-width: 1224px) {
+    order: 3;
+    display: flex;
+    flex: 1;
+    justify-content: end;
+    align-items: center;
+  }
+`;
+
+export const Hamburguer = styled.div`
+  display: none;
+
+  @media (max-width: 1224px) {
+    display: flex;
+    flex: 1;
+    order: 1;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    cursor: pointer;
+    color: ${({ theme }) => theme.colors.white100};
+    z-index: 15;
+  }
+`;
+
+export const MobileMenu = styled.div`
+  position: absolute;
+  top: 203px;
+  left: 0;
+  width: 100%;
+  background-color: ${({ theme }) => theme.colors.gray300};
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 20px 40px;
+  z-index: 9;
+
+  ${NavItem} {
+    font-size: 18px;
+  }
+`;
