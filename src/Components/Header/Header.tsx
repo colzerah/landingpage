@@ -4,13 +4,23 @@ import {
   HeaderContainer,
   LogoWrapper,
   Nav,
-  NavItem,
   RightContent,
   Hamburguer,
   MobileMenu,
+  NavButton,
 } from "./styles";
 import logo from "../../assets/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
+
+const navItems = [
+  "Home",
+  "Quem Somos",
+  "Serviços",
+  "Vídeo",
+  "Faq",
+  "Clientes",
+  "Contato",
+];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,30 +38,22 @@ export function Header() {
       </LogoWrapper>
 
       <Nav>
-        <NavItem>Home</NavItem>
-        <NavItem>Quem Somos</NavItem>
-        <NavItem>Serviços</NavItem>
-        <NavItem>Vídeo</NavItem>
-        <NavItem>Faq</NavItem>
-        <NavItem>Clientes</NavItem>
-        <NavItem>Contato</NavItem>
+        {navItems.map((item) => (
+          <NavButton key={item}>{item}</NavButton>
+        ))}
       </Nav>
 
       <RightContent>
         <Hamburguer onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+          {isOpen ? <FiX size={30} /> : <FiMenu size={30} />}
         </Hamburguer>
       </RightContent>
 
       {isOpen && (
         <MobileMenu>
-          <NavItem>Home</NavItem>
-          <NavItem>Quem Somos</NavItem>
-          <NavItem>Serviços</NavItem>
-          <NavItem>Vídeo</NavItem>
-          <NavItem>Faq</NavItem>
-          <NavItem>Clientes</NavItem>
-          <NavItem>Contato</NavItem>
+          {navItems.map((item) => (
+            <NavButton key={item}>{item}</NavButton>
+          ))}
         </MobileMenu>
       )}
     </HeaderContainer>

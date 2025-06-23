@@ -25,7 +25,7 @@ import rightvector from "@/assets/vetores/reightvector.png";
 export function Section1() {
   return (
     <HeroContainer $bg={bgImage.src}>
-      <LeftContent>
+      {/* <LeftContent>
         <LeftH1>
           Soluções digitais <br /> que moldam o futuro
         </LeftH1>
@@ -58,7 +58,7 @@ export function Section1() {
         <Balao2Div>
           <Image src={balao2} alt="balao message" />
         </Balao2Div>
-      </RightContent>
+      </RightContent> */}
     </HeroContainer>
   );
 }
