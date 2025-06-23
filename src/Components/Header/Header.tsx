@@ -9,7 +9,6 @@ import {
   Hamburguer,
   MobileMenu,
 } from "./styles";
-import { Button } from "../Button";
 import logo from "../../assets/logo.png";
 import { FiMenu, FiX } from "react-icons/fi";
 
@@ -18,10 +17,6 @@ export function Header() {
 
   return (
     <HeaderContainer>
-      <Hamburguer onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-      </Hamburguer>
-
       <LogoWrapper>
         <Image
           src={logo}
@@ -43,15 +38,9 @@ export function Header() {
       </Nav>
 
       <RightContent>
-        <Button
-          title={"Login"}
-          width="185px"
-          height="70px"
-          colorScheme="primary"
-          fontScheme="secondary"
-          fontSize="18px"
-          fontWeight={700}
-        />
+        <Hamburguer onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+        </Hamburguer>
       </RightContent>
 
       {isOpen && (

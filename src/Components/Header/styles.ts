@@ -27,9 +27,8 @@ export const LogoWrapper = styled.div`
   justify-content: center;
 
   @media (max-width: 1224px) {
-    order: 2;
     flex: 1;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
   }
 `;
@@ -66,44 +65,47 @@ export const RightContent = styled.div`
   justify-content: center;
 
   @media (max-width: 1224px) {
-    order: 3;
     display: flex;
     flex: 1;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
   }
 `;
 
 export const Hamburguer = styled.div`
+  width: auto;
+  height: auto;
   display: none;
 
   @media (max-width: 1224px) {
     display: flex;
     flex: 1;
-    order: 1;
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    left: 40px;
+    right: 40px;
     cursor: pointer;
     color: ${({ theme }) => theme.colors.white100};
-    z-index: 15;
+    z-index: 9;
   }
 `;
 
 export const MobileMenu = styled.div`
   position: absolute;
-  top: 203px;
-  left: 0;
-  width: 100%;
+  top: 80px;
+  left: 35px;
+  width: auto;
   background-color: ${({ theme }) => theme.colors.gray300};
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 20px 40px;
-  z-index: 9;
 
   ${NavItem} {
     font-size: 18px;
+  }
+
+  @media (min-width: 1225px) {
+    display: none;
   }
 `;

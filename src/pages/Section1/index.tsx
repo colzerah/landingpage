@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import {
-  HeroSection,
+  HeroContainer,
   LeftContent,
   RightContent,
   LeftH1,
@@ -24,7 +24,7 @@ import rightvector from "@/assets/vetores/reightvector.png";
 
 export function Section1() {
   return (
-    <HeroSection $bg={bgImage.src}>
+    <HeroContainer $bg={bgImage.src}>
       <LeftContent>
         <LeftH1>
           Soluções digitais <br /> que moldam o futuro
@@ -59,6 +59,6 @@ export function Section1() {
           <Image src={balao2} alt="balao message" />
         </Balao2Div>
       </RightContent>
-    </HeroSection>
+    </HeroContainer>
   );
 }
