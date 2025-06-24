@@ -1,13 +1,21 @@
 import styled from "styled-components";
 
-export const HeroContainer = styled.section<{ $bg: string }>`
+export const Container = styled.section``;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const HeroContainer = styled.div<{ $bg: string }>`
   height: 100vh;
   background-image: url(${({ $bg }) => $bg});
   background-size: cover;
   background-repeat: no-repeat;
+  background-color: rgba(48, 25, 52, 0.6);
   position: relative;
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
 `;
 

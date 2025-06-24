@@ -13,6 +13,8 @@ import {
   Balao2Div,
   LeftVector,
   RightVector,
+  Container,
+  Content,
 } from "./styles";
 import bgImage from "@/assets/homeBackground.png";
 import serachIcon from "../../assets/Icons/search.png";
@@ -21,11 +23,15 @@ import balao1 from "@/assets/baloes/balao1.png";
 import balao2 from "@/assets/baloes/balao2.png";
 import leftvector from "@/assets/vetores/leftvector.png";
 import rightvector from "@/assets/vetores/reightvector.png";
+import { HeaderN } from "@/Components/HeaderN/HeaderN";
 
 export function Section1() {
   return (
-    <HeroContainer $bg={bgImage.src}>
-      {/* <LeftContent>
+    <Container>
+      <Content>
+        <HeroContainer $bg={bgImage.src}>
+          <HeaderN>
+            {/* <LeftContent>
         <LeftH1>
           Soluções digitais <br /> que moldam o futuro
         </LeftH1>
@@ -59,6 +65,9 @@ export function Section1() {
           <Image src={balao2} alt="balao message" />
         </Balao2Div>
       </RightContent> */}
-    </HeroContainer>
+          </HeaderN>
+        </HeroContainer>
+      </Content>
+    </Container>
   );
 }
