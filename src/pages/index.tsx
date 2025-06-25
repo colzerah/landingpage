@@ -1,5 +1,3 @@
-import { Header } from "@/Components/Header/Header";
-import { HeaderN } from "@/Components/HeaderN/HeaderN";
 import { Section1 } from "./Section1";
 import { Section2 } from "./Section2";
 

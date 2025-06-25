@@ -23,9 +23,10 @@ export const DivLogo = styled.div`
 
 export const NavMenu = styled.nav`
   display: flex;
-  flex: 8;
+  flex: 4;
   justify-content: center;
   gap: 20px;
+  margin-right: 10%;
 `;
 
 export const ButtonNav = styled.button`
@@ -68,8 +69,8 @@ export const DivButtonMenu = styled.div`
 
 export const DivMobileMenu = styled.div`
   position: absolute;
-  top: 80px;
-  right: 145px;
+  top: 15px;
+  left: 35px;
   background-color: ${({ theme }) => theme.colors.gray300};
   display: flex;
   flex-direction: column;

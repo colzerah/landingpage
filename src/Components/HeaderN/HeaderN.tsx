@@ -4,13 +4,6 @@ import { useMediaQuery } from "usehooks-ts";
 
 import Image from "next/image";
 import {
-  HeaderContainer,
-  LogoWrapper,
-  Nav,
-  RightContent,
-  Hamburguer,
-  MobileMenu,
-  NavButton,
   Container,
   DivLogo,
   NavMenu,

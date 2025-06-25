@@ -5,21 +5,30 @@ export const Container = styled.section``;
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 `;
 
 export const HeroContainer = styled.div<{ $bg: string }>`
   height: 100vh;
+  width: 100vw;
   background-image: url(${({ $bg }) => $bg});
   background-size: cover;
   background-repeat: no-repeat;
   background-color: rgba(48, 25, 52, 0.6);
   position: relative;
   display: flex;
-  /* align-items: center; */
+  flex-wrap: wrap;
   justify-content: center;
 `;
 
-export const LeftContent = styled.div``;
+export const LeftContent = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-left: 150px;
+`;
 
 export const LeftH1 = styled.h1`
   color: ${({ theme }) => theme.colors.white100};
@@ -68,31 +77,22 @@ export const StyledSpan = styled.span`
 `;
 
 export const RightContent = styled.div`
-  position: relative;
-  width: 609px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
   height: 406px;
+  margin-right: 7%;
+  position: relative;
 `;
 
 export const Balao1Div = styled.div`
-  position: absolute;
-  top: 0;
-  left: 20px;
+  display: flex;
+  transform: translate(-50px, 40px);
 `;
 
 export const Balao2Div = styled.div`
-  position: absolute;
-  bottom: -20px;
-  right: 0;
-`;
-
-export const LeftVector = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: 90px;
-`;
-
-export const RightVector = styled.div`
-  position: absolute;
-  right: -50px;
-  top: 65px;
+  display: flex;
+  transform: translateX(50px);
 `;
