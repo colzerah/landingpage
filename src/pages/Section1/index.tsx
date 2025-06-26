@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { useMediaQuery } from "usehooks-ts";
 import {
   HeroContainer,
   LeftContent,
@@ -20,24 +21,42 @@ import { Button } from "@/Components/Button";
 import balao1 from "@/assets/baloes/balao1.png";
 import balao2 from "@/assets/baloes/balao2.png";
 import { HeaderN } from "@/Components/HeaderN/HeaderN";
+import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 export function Section1() {
+  const isLarge = useMediaQuery("(min-width: 1360px)");
+
+  const breakpoint = useBreakpoint();
+
+  const breakpointButton = () => {
+    switch (breakpoint) {
+      case "md":
+        return "auto";
+      case "sm":
+        return "auto";
+      case "xsm":
+        return "auto";
+      default:
+        return "185px";
+    }
+  };
+
   return (
     <Container>
       <Content>
         <HeroContainer $bg={bgImage.src}>
           <HeaderN />
-          <LeftContent>
-            <LeftH1>
+          <LeftContent breakpoint={isLarge}>
+            <LeftH1 breakpoint={breakpoint}>
               Soluções digitais <br /> que moldam o futuro <br />
-              <StyledSpan>da sua empresa.</StyledSpan>
+              <StyledSpan breakpoint={breakpoint}>da sua empresa.</StyledSpan>
             </LeftH1>
-            <InputContainer>
+            <InputContainer breakpoint={breakpoint}>
               <Icon src={serachIcon.src} alt="Lupa" />
               <StyledInput placeholder="Faça uma pergunta" />
               <Button
                 title={"Enviar"}
-                width="185px"
+                width={breakpointButton()}
                 height="70px"
                 colorScheme="secondary"
                 fontScheme="secondary"
@@ -47,15 +66,17 @@ export function Section1() {
             </InputContainer>
           </LeftContent>
 
-          <RightContent>
-            <Balao1Div>
-              <Image src={balao1} alt="balao bem vindo" />
-            </Balao1Div>
+          {isLarge && (
+            <RightContent>
+              <Balao1Div>
+                <Image src={balao1} alt="balao bem vindo" />
+              </Balao1Div>
 
-            <Balao2Div>
-              <Image src={balao2} alt="balao message" />
-            </Balao2Div>
-          </RightContent>
+              <Balao2Div>
+                <Image src={balao2} alt="balao message" />
+              </Balao2Div>
+            </RightContent>
+          )}
         </HeroContainer>
       </Content>
     </Container>

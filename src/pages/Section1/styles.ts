@@ -21,30 +21,97 @@ export const HeroContainer = styled.div<{ $bg: string }>`
   justify-content: center;
 `;
 
-export const LeftContent = styled.div`
+interface LeftContentProps {
+  breakpoint: boolean;
+}
+
+export const LeftContent = styled.div<LeftContentProps>`
   display: flex;
   flex: 1;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: ${({ breakpoint }) => {
+    if (breakpoint) {
+      return "flex-start";
+    }
+    return "center";
+  }};
   flex-direction: column;
   flex-wrap: wrap;
-  margin-left: 150px;
+  // margin-left: 150px;
+  margin-left: ${({ breakpoint }) => {
+    if (breakpoint) {
+      return "150px";
+    }
+    return "0px";
+  }};
 `;
 
-export const LeftH1 = styled.h1`
+interface LeftH1Props {
+  breakpoint: "xl" | "lg" | "md" | "sm" | "xsm";
+}
+
+export const LeftH1 = styled.h1<LeftH1Props>`
   color: ${({ theme }) => theme.colors.white100};
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-weight: 800;
-  font-size: 64px;
+  font-size: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "64px";
+      case "lg":
+        return "64px";
+      case "md":
+        return "50px";
+      case "sm":
+        return "42px";
+      case "xsm":
+      default:
+        return "37px";
+    }
+  }};
 `;
 
-export const InputContainer = styled.div`
+interface InputContainerProps {
+  breakpoint: "xl" | "lg" | "md" | "sm" | "xsm";
+}
+
+export const InputContainer = styled.div<InputContainerProps>`
   margin-top: 60px;
   display: flex;
-  width: 630px;
+  width: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "630px";
+      case "lg":
+        return "630px";
+      case "md":
+        return "500px";
+      case "sm":
+        return "";
+      case "xsm":
+      default:
+        return "";
+    }
+  }};
   padding: 10px;
   align-items: center;
   background-color: #2b2b3d;
   border-radius: 999px;
+  transform: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return;
+      case "lg":
+        return "translate(-50px)";
+      case "md":
+        return "translate(-35px)";
+      case "sm":
+        return "";
+      case "xsm":
+      default:
+        return "";
+    }
+  }};
 `;
 
 export const Icon = styled.img`
@@ -56,6 +123,7 @@ export const Icon = styled.img`
 export const StyledInput = styled.input`
   flex: 1;
   background: transparent;
+  width: 10px;
   border: none;
   outline: none;
   padding: 8px;
@@ -69,11 +137,29 @@ export const StyledInput = styled.input`
   }
 `;
 
-export const StyledSpan = styled.span`
+interface StyledSpanProps {
+  breakpoint: "xl" | "lg" | "md" | "sm" | "xsm";
+}
+
+export const StyledSpan = styled.span<StyledSpanProps>`
   color: ${({ theme }) => theme.colors.purple200};
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-weight: 800;
-  font-size: 64px;
+  font-size: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "64px";
+      case "lg":
+        return "64px";
+      case "md":
+        return "50px";
+      case "sm":
+        return "42px";
+      case "xsm":
+      default:
+        return "37px";
+    }
+  }};
 `;
 
 export const RightContent = styled.div`
