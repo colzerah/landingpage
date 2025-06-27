@@ -9,40 +9,62 @@ export const Content = styled.div`
 `;
 
 export const HeroContainer = styled.div<{ $bg: string }>`
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-image: url(${({ $bg }) => $bg});
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(48, 25, 52, 0.6);
-  position: relative;
+  background-position: center center;
+  background-color: rgba(48, 25, 52, 1);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
 
 interface LeftContentProps {
-  breakpoint: boolean;
+  breakpoint: "xl" | "lg" | "md" | "sm" | "xsm";
 }
 
 export const LeftContent = styled.div<LeftContentProps>`
   display: flex;
   flex: 1;
-  // align-items: flex-start;
-  align-items: ${({ breakpoint }) => {
+  /* align-items: ${({ breakpoint }) => {
     if (breakpoint) {
       return "flex-start";
     }
     return "center";
+  }}; */
+  align-items: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "flex-start";
+      case "lg":
+        return "center";
+      case "md":
+        return "center";
+      case "sm":
+        return "center";
+      case "xsm":
+      default:
+        return "center";
+    }
   }};
   flex-direction: column;
   flex-wrap: wrap;
-  // margin-left: 150px;
   margin-left: ${({ breakpoint }) => {
-    if (breakpoint) {
-      return "150px";
+    switch (breakpoint) {
+      case "xl":
+        return "150px";
+      case "lg":
+        return "0px";
+      case "md":
+        return "0px";
+      case "sm":
+        return "0px";
+      case "xsm":
+      default:
+        return "5%";
     }
-    return "0px";
   }};
 `;
 
@@ -87,10 +109,25 @@ export const InputContainer = styled.div<InputContainerProps>`
       case "md":
         return "500px";
       case "sm":
-        return "";
+        return "420px";
       case "xsm":
       default:
-        return "";
+        return "350px";
+    }
+  }};
+  height: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "90px";
+      case "lg":
+        return "90px";
+      case "md":
+        return "80px";
+      case "sm":
+        return "80px";
+      case "xsm":
+      default:
+        return "70px";
     }
   }};
   padding: 10px;
@@ -106,21 +143,44 @@ export const InputContainer = styled.div<InputContainerProps>`
       case "md":
         return "translate(-35px)";
       case "sm":
-        return "";
+        return "translate(-25px)";
       case "xsm":
       default:
-        return "";
+        return "translate(-15px)";
     }
   }};
 `;
 
-export const Icon = styled.img`
+interface IconProps {
+  breakpoint: "xl" | "lg" | "md" | "sm" | "xsm";
+}
+
+export const Icon = styled.img<IconProps>`
   width: 20px;
   height: 20px;
-  margin: 0 25px;
+  // margin: 0 25px;
+  margin: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "0 25px";
+      case "lg":
+        return "0 25px";
+      case "md":
+        return "0 20px";
+      case "sm":
+        return "0 15px";
+      case "xsm":
+      default:
+        return "0 5px";
+    }
+  }};
 `;
 
-export const StyledInput = styled.input`
+interface StyledInputProps {
+  breakpoint: "xl" | "lg" | "md" | "sm" | "xsm";
+}
+
+export const StyledInput = styled.input<StyledInputProps>`
   flex: 1;
   background: transparent;
   width: 10px;
@@ -129,7 +189,22 @@ export const StyledInput = styled.input`
   padding: 8px;
   font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: 800;
-  font-size: 22px;
+  // font-size: 22px;
+  font-size: ${({ breakpoint }) => {
+    switch (breakpoint) {
+      case "xl":
+        return "22px";
+      case "lg":
+        return "22px";
+      case "md":
+        return "18px";
+      case "sm":
+        return "18px";
+      case "xsm":
+      default:
+        return "15px";
+    }
+  }};
   line-height: 100%;
   color: ${({ theme }) => theme.colors.gray400};
   &::placeholder {

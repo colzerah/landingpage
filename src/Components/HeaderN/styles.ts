@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
   width: 100vw;
-  background: linear-gradient(rgba(137, 119, 162, 0.8), rgba(68, 71, 90, 0));
-  height: 200px;
+  background: linear-gradient(rgba(137, 119, 162, 0.6), rgba(68, 71, 90, 0));
 `;
 
 export const Content = styled.div`

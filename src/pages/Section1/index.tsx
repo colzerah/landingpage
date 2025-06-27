@@ -24,20 +24,33 @@ import { HeaderN } from "@/Components/HeaderN/HeaderN";
 import { useBreakpoint } from "@/hooks/useBreakpoint";
 
 export function Section1() {
-  const isLarge = useMediaQuery("(min-width: 1360px)");
+  const isXLarge = useMediaQuery("(min-width: 1360px)");
 
   const breakpoint = useBreakpoint();
 
   const breakpointButton = () => {
     switch (breakpoint) {
       case "md":
-        return "auto";
+        return "185px";
       case "sm":
         return "auto";
       case "xsm":
-        return "auto";
+        return "120px";
       default:
         return "185px";
+    }
+  };
+
+  const breakpoinHeightButton = () => {
+    switch (breakpoint) {
+      case "md":
+        return "65px";
+      case "sm":
+        return "60px";
+      case "xsm":
+        return "55px";
+      default:
+        return "70px";
     }
   };
 
@@ -46,18 +59,21 @@ export function Section1() {
       <Content>
         <HeroContainer $bg={bgImage.src}>
           <HeaderN />
-          <LeftContent breakpoint={isLarge}>
+          <LeftContent breakpoint={breakpoint}>
             <LeftH1 breakpoint={breakpoint}>
               Soluções digitais <br /> que moldam o futuro <br />
               <StyledSpan breakpoint={breakpoint}>da sua empresa.</StyledSpan>
             </LeftH1>
             <InputContainer breakpoint={breakpoint}>
-              <Icon src={serachIcon.src} alt="Lupa" />
-              <StyledInput placeholder="Faça uma pergunta" />
+              <Icon src={serachIcon.src} alt="Lupa" breakpoint={breakpoint} />
+              <StyledInput
+                placeholder="Faça uma pergunta"
+                breakpoint={breakpoint}
+              />
               <Button
                 title={"Enviar"}
                 width={breakpointButton()}
-                height="70px"
+                height={breakpoinHeightButton()}
                 colorScheme="secondary"
                 fontScheme="secondary"
                 fontSize="22px"
@@ -66,7 +82,7 @@ export function Section1() {
             </InputContainer>
           </LeftContent>
 
-          {isLarge && (
+          {isXLarge && (
             <RightContent>
               <Balao1Div>
                 <Image src={balao1} alt="balao bem vindo" />
