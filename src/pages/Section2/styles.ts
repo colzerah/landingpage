@@ -12,16 +12,19 @@ export const HeroContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 100vh;
-  width: 100vw;
+  width: 100%;
+  height: 930px;
   position: relative;
-  background-color: ${({ theme }) => theme.colors.gray300};
-  /* background: linear-gradient(
+  /* background-color: ${({ theme }) => theme.colors.gray300}; */
+  background: linear-gradient(
     145deg,
-    #21232c 30%,
-    rgba(189, 147, 249, 0.5) 60%,
-    rgb(45, 46, 51)
-  ); */
+    rgba(45, 46, 51, 0.99) 35%,
+    rgba(117, 96, 150, 0.99) 50%,
+    rgba(189, 147, 249, 0.99) 40%,
+    rgba(117, 96, 150, 0.99) 50%,
+    rgba(45, 46, 51, 0.99) 75%
+  );
+  overflow: hidden;
 `;
 
 export const LeftContent = styled.div`
@@ -33,23 +36,19 @@ export const LeftContent = styled.div`
 
 export const RobotDiv = styled.div`
   display: flex;
+  z-index: 2;
 `;
 
-// export const WavesDiv = styled.div`
-//   position: absolute;
-//   top: -75px;
-//   right: 570px;
-//   overflow: hidden;
-//   z-index: 2;
-// `;
+export const WavesDiv = styled.div`
+  position: absolute;
+  left: 450px;
+  z-index: 1;
+`;
 
-// export const ConectionsDiv = styled.div`
-//   position: absolute;
-//   top: -140px;
-//   left: -173px;
-//   overflow: hidden;
-//   z-index: 1;
-// `;
+export const ConectionsDiv = styled.div`
+  position: absolute;
+  z-index: 1;
+`;
 
 export const RightContent = styled.div`
   display: flex;
@@ -58,6 +57,23 @@ export const RightContent = styled.div`
   justify-content: center;
   flex-direction: column;
   gap: 50px;
+`;
+
+export const BackgroundText = styled.h1`
+  font-family: ${({ theme }) => theme.fonts.primary};
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 70%;
+  font-size: 200px;
+  z-index: 0;
+  color: #bd93f947;
+  /* color: ${({ theme }) => theme.colors.purple200}; */
+  position: absolute;
+  top: 20%;
+  right: -250px;
+  opacity: 30%;
+  pointer-events: none;
+  user-select: none;
 `;
 
 export const RightH1 = styled.h1`
@@ -104,9 +120,4 @@ export const StyledP = styled.p`
   letter-spacing: 0px;
 `;
 
-export const ButtonDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-100px);
-`;
+export const ButtonDiv = styled.div``;

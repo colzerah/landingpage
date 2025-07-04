@@ -10,7 +10,7 @@ export const Content = styled.div`
 
 export const HeroContainer = styled.div<{ $bg: string }>`
   min-height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-image: url(${({ $bg }) => $bg});
   background-size: cover;
   background-repeat: no-repeat;
