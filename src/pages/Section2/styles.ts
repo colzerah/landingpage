@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  height: 100vh;
-  display: grid;
+export const Container = styled.div``;
+
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+`;
+
+export const HeroContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100vw;
   position: relative;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
   background-color: ${({ theme }) => theme.colors.gray300};
   /* background: linear-gradient(
     145deg,
@@ -15,38 +24,38 @@ export const Container = styled.div`
   ); */
 `;
 
-export const LeftSection = styled.div`
-  position: relative;
-  width: 609px;
-  height: 406px;
+export const LeftContent = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: flex-start;
 `;
 
 export const RobotDiv = styled.div`
-  position: absolute;
-  top: -140px;
-  left: -173px;
-  overflow: hidden;
-  z-index: 3;
-`;
-
-export const WavesDiv = styled.div`
-  position: absolute;
-  top: -75px;
-  right: 0px;
-  overflow: hidden;
-  z-index: 2;
-`;
-
-export const ConectionsDiv = styled.div`
-  position: absolute;
-  top: -140px;
-  left: -173px;
-  overflow: hidden;
-  z-index: 1;
-`;
-
-export const RightSection = styled.div`
   display: flex;
+`;
+
+// export const WavesDiv = styled.div`
+//   position: absolute;
+//   top: -75px;
+//   right: 570px;
+//   overflow: hidden;
+//   z-index: 2;
+// `;
+
+// export const ConectionsDiv = styled.div`
+//   position: absolute;
+//   top: -140px;
+//   left: -173px;
+//   overflow: hidden;
+//   z-index: 1;
+// `;
+
+export const RightContent = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 50px;
 `;
@@ -61,8 +70,21 @@ export const RightH1 = styled.h1`
 `;
 
 export const TextDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+`;
+
+export const H1Div = styled.div`
   width: 506px;
   height: 216px;
+`;
+
+export const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 `;
 
 export const StyledSpan = styled.span`
@@ -80,4 +102,11 @@ export const StyledP = styled.p`
   width: 410px;
   line-height: 30px;
   letter-spacing: 0px;
+`;
+
+export const ButtonDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-100px);
 `;
