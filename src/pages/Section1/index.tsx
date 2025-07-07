@@ -41,7 +41,7 @@ export function Section1() {
     }
   };
 
-  const breakpoinHeightButton = () => {
+  const breakpointHeightButton = () => {
     switch (breakpoint) {
       case "md":
         return "65px";
@@ -73,7 +73,7 @@ export function Section1() {
               <Button
                 title={"Enviar"}
                 width={breakpointButton()}
-                height={breakpoinHeightButton()}
+                height={breakpointHeightButton()}
                 colorScheme="secondary"
                 fontScheme="secondary"
                 fontSize="22px"

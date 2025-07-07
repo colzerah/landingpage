@@ -19,32 +19,39 @@ import {
   BackgroundText,
 } from "./styles";
 import { Button } from "@/Components/Button";
+
+import { useMediaQuery } from "usehooks-ts";
+
 import robot from "@/assets/section2/robot.svg";
 import conections from "@/assets/section2/robotconections.png";
 import waves from "@/assets/section2/waves.png";
 
 export function Section2() {
+  const breakpoint = useMediaQuery("(min-width: 1197px)");
+
   return (
     <Container>
       <Content>
         <HeroContainer>
-          <LeftContent>
-            <RobotDiv>
-              <Image src={robot} alt="Robo" height={803} />
-            </RobotDiv>
-            <WavesDiv>
-              <Image src={waves} alt="ondas" />
-            </WavesDiv>
-            <ConectionsDiv>
-              <Image src={conections} alt="conexoes" />
-            </ConectionsDiv>
-          </LeftContent>
+          {breakpoint && (
+            <LeftContent>
+              <RobotDiv>
+                <Image src={robot} alt="Robo" height={803} />
+              </RobotDiv>
+              <WavesDiv>
+                <Image src={waves} alt="ondas" />
+              </WavesDiv>
+              <ConectionsDiv>
+                <Image src={conections} alt="conexoes" />
+              </ConectionsDiv>
+            </LeftContent>
+          )}
 
           <RightContent>
             <BackgroundText>
               Code <br /> Crafters
             </BackgroundText>
-            <TextDiv>
+            <TextDiv breakpoint={breakpoint}>
               <H1Div>
                 <RightH1>
                   Solucionando desafios com <StyledSpan>tecnologia.</StyledSpan>{" "}

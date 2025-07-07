@@ -18,7 +18,7 @@ export const HeroContainer = styled.div`
   /* background-color: ${({ theme }) => theme.colors.gray300}; */
   background: linear-gradient(
     145deg,
-    rgba(45, 46, 51, 0.99) 35%,
+    rgba(45, 46, 51, 0.99) 15%,
     rgba(117, 96, 150, 0.99) 50%,
     rgba(189, 147, 249, 0.99) 40%,
     rgba(117, 96, 150, 0.99) 50%,
@@ -66,8 +66,7 @@ export const BackgroundText = styled.h1`
   line-height: 70%;
   font-size: 200px;
   z-index: 0;
-  color: #bd93f947;
-  /* color: ${({ theme }) => theme.colors.purple200}; */
+  color: rgba(189, 147, 249, 0.28);
   position: absolute;
   top: 20%;
   right: -250px;
@@ -85,16 +84,28 @@ export const RightH1 = styled.h1`
   line-height: 72px;
 `;
 
-export const TextDiv = styled.div`
+interface TextDivProps {
+  breakpoint: boolean;
+}
+
+export const TextDiv = styled.div<TextDivProps>`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: ${({ breakpoint }) => {
+    if (breakpoint) {
+      return "flex-start";
+    }
+    return "center";
+  }};
   gap: 50px;
 `;
 
 export const H1Div = styled.div`
-  width: 506px;
-  height: 216px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 475px;
 `;
 
 export const StyledDiv = styled.div`
@@ -108,6 +119,7 @@ export const StyledSpan = styled.span`
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-weight: 800;
   font-size: 64px;
+  display: flex;
 `;
 
 export const StyledP = styled.p`

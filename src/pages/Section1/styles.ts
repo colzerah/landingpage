@@ -28,12 +28,6 @@ interface LeftContentProps {
 export const LeftContent = styled.div<LeftContentProps>`
   display: flex;
   flex: 1;
-  /* align-items: ${({ breakpoint }) => {
-    if (breakpoint) {
-      return "flex-start";
-    }
-    return "center";
-  }}; */
   align-items: ${({ breakpoint }) => {
     switch (breakpoint) {
       case "xl":
@@ -158,7 +152,6 @@ interface IconProps {
 export const Icon = styled.img<IconProps>`
   width: 20px;
   height: 20px;
-  // margin: 0 25px;
   margin: ${({ breakpoint }) => {
     switch (breakpoint) {
       case "xl":
@@ -189,7 +182,6 @@ export const StyledInput = styled.input<StyledInputProps>`
   padding: 8px;
   font-family: ${({ theme }) => theme.fonts.primary};
   font-weight: 800;
-  // font-size: 22px;
   font-size: ${({ breakpoint }) => {
     switch (breakpoint) {
       case "xl":
