@@ -91,7 +91,6 @@ interface TextDivProps {
 export const TextDiv = styled.div<TextDivProps>`
   display: flex;
   flex-direction: column;
-  // align-items: flex-start;
   align-items: ${({ breakpoint }) => {
     if (breakpoint) {
       return "flex-start";
