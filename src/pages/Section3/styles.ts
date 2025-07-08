@@ -6,6 +6,8 @@ export const Content = styled.div``;
 
 export const HeroContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  gap: 50px;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.gray300};
@@ -32,4 +34,10 @@ export const StyledSpan = styled.span`
   font-family: ${({ theme }) => theme.fonts.secondary};
   font-weight: 600;
   font-size: 64px;
+`;
+
+export const CardDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 `;
