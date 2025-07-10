@@ -10,10 +10,14 @@ export const CardContainer = styled(motion.div)<CardContainerProps>`
   width: 305px;
   height: 335px;
   border: 2.5px solid transparent;
-  border-radius: 16px; // não pega radius com border-image e border-color não aceita gradient
   border-image: linear-gradient(to bottom, #bd93f9, #666666);
   border-image-slice: 1;
   overflow: hidden;
+  display: flex;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  color: ${({ theme }) => theme.colors.neutral50};
 
   ${({ backgroundImage }) =>
     backgroundImage
@@ -23,15 +27,26 @@ export const CardContainer = styled(motion.div)<CardContainerProps>`
       background-position: center;
     `
       : `
-      background-color: transparente;
+      background-color: transparente;     
     `}
 
-  background-size: cover;
-  background-position: center;
-  color: ${({ theme }) => theme.colors.neutral50};
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
+  &::before {
+    ${({ backgroundImage }) =>
+      backgroundImage
+        ? `
+          content: '';
+          position: absolute;
+          inset: 0;
+          background-color: rgba(134, 72, 2223, 0.60);
+          z-index: 1;
+        `
+        : ""}
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 export const Container = styled.div`
